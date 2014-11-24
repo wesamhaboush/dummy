@@ -1,9 +1,9 @@
-package com.jpmorgan.otm.mocker.config;
+package com.codebreeze.rest.server.config;
 
-import com.jpmorgan.otm.mocker.rs.AccountRestService;
-import com.jpmorgan.otm.mocker.rs.JaxRsApiApplication;
-import com.jpmorgan.otm.mocker.rs.ToStringProvider;
-import com.jpmorgan.otm.mocker.services.AccountService;
+import com.codebreeze.rest.server.rs.AccountRestService;
+import com.codebreeze.rest.server.rs.JaxRsApiApplication;
+import com.codebreeze.rest.server.rs.ToStringProvider;
+import com.codebreeze.rest.server.services.AccountService;
 import org.apache.cxf.bus.spring.SpringBus;
 import org.apache.cxf.endpoint.Server;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;

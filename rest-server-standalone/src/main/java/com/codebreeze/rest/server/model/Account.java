@@ -1,4 +1,4 @@
-package com.jpmorgan.otm.mocker.model;
+package com.codebreeze.rest.server.model;
 
 import java.math.BigDecimal;
 

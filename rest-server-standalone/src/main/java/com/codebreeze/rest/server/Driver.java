@@ -1,6 +1,6 @@
-package com.jpmorgan.otm.mocker;
+package com.codebreeze.rest.server;
 
-import com.jpmorgan.otm.mocker.config.AppConfig;
+import com.codebreeze.rest.server.config.AppConfig;
 import org.apache.cxf.transport.servlet.CXFServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;

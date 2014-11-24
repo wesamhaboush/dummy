@@ -1,4 +1,4 @@
-package com.jpmorgan.otm.mocker.rs;
+package com.codebreeze.rest.server.rs;
 
 import org.apache.commons.io.IOUtils;
 

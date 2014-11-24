@@ -1,7 +1,7 @@
-package com.jpmorgan.otm.mocker.rs;
+package com.codebreeze.rest.server.rs;
 
-import com.jpmorgan.otm.mocker.model.Account;
-import com.jpmorgan.otm.mocker.services.AccountService;
+import com.codebreeze.rest.server.model.Account;
+import com.codebreeze.rest.server.services.AccountService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;

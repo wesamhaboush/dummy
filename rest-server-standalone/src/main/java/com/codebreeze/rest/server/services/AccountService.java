@@ -1,7 +1,7 @@
-package com.jpmorgan.otm.mocker.services;
+package com.codebreeze.rest.server.services;
 
 import com.google.common.collect.Maps;
-import com.jpmorgan.otm.mocker.model.Account;
+import com.codebreeze.rest.server.model.Account;
 import org.apache.commons.collections4.Factory;
 import org.apache.commons.collections4.map.LazyMap;
 import org.springframework.stereotype.Service;
