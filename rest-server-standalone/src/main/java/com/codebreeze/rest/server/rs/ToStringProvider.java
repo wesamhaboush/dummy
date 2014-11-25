@@ -28,7 +28,6 @@ public class ToStringProvider implements MessageBodyReader<Object>,
     @Override
     public boolean isWriteable ( Class<?> type, Type genericType,
                                  Annotation[] annotations, MediaType mediaType ) {
-        System.out.println(mediaType);
         return MediaType.TEXT_PLAIN_TYPE.equals ( mediaType );
 //                && type.equals ( Sometype.class );
     }

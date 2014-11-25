@@ -2,14 +2,17 @@ package com.codebreeze.rest.server.rs;
 
 import com.codebreeze.rest.server.model.Account;
 import com.codebreeze.rest.server.services.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import java.math.BigDecimal;
 
+@Component
 @Path( "/account" )
 public class AccountRestService {
-    @Inject
+    @Autowired
     private AccountService accountService;
 
     @Produces( { "text/plain" } )

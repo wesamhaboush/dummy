@@ -1,5 +1,6 @@
 package com.codebreeze.rest.client.config;
 
+import com.codebreeze.rest.client.services.AccountService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -19,6 +20,11 @@ public class AppConfig {
     public RestTemplate restTemplate() {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate;
+    }
+
+    @Bean
+    public AccountService accountService(){
+        return new AccountService();
     }
 
 }
