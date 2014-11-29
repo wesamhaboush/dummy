@@ -4,31 +4,26 @@ import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.Parameters;
 import com.codebreeze.rest.server.config.AppConfig;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
-import org.springframework.web.context.ContextLoaderListener;
+import org.apache.catalina.Context;
+import org.apache.catalina.startup.Tomcat;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+import java.io.File;
 
-public class Driver {
+
+public class TomcatDriver {
     public static void main(final String... args) throws Exception {
         final EchoServiceConfiguration echoServiceConfiguration = parseParamsWithJCommander(args);
-        final Server server = new Server(echoServiceConfiguration.port);
-
-        final ServletHolder servletHolder = new ServletHolder(new DispatcherServlet(getContext()));
-        final ServletContextHandler servletContextHandler = new ServletContextHandler();
-        servletContextHandler.setContextPath("/");
-        servletContextHandler.addServlet(servletHolder, "/*");
-        servletContextHandler.addEventListener(new ContextLoaderListener());
-
-        servletContextHandler.setInitParameter("contextClass", AnnotationConfigWebApplicationContext.class.getName());
-
-        server.setHandler(servletContextHandler);
-        server.start();
-        server.join();
+        final Tomcat tomcat = new Tomcat();
+        tomcat.setPort(echoServiceConfiguration.port);
+        final File base = new File(System.getProperty("java.io.tmpdir"));
+        final Context rootCtx = tomcat.addContext("/", base.getAbsolutePath());
+        Tomcat.addServlet(rootCtx, "springServlet", new DispatcherServlet(getContext()));
+        rootCtx.addServletMapping("/*", "springServlet");
+        tomcat.start();
+        tomcat.getServer().await();
     }
 
     private static EchoServiceConfiguration parseParamsWithJCommander(final String...args) {
