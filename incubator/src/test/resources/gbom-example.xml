@@ -1,0 +1,95 @@
+<gbom>
+  <!--You have a CHOICE of the next 2 items at this level-->
+  <!--Optional:-->
+  <referenceData>
+    <!--Optional:-->
+    <common>
+      <!--Optional:-->
+      <id>string</id>
+      <!--Zero or more repetitions:-->
+      <businessId>
+        <domain>string</domain>
+        <!--Optional:-->
+        <ibmlSchemeName>string</ibmlSchemeName>
+        <!--Zero or more repetitions:-->
+        <id>string</id>
+        <!--Optional:-->
+        <shortDescription>string</shortDescription>
+        <!--Optional:-->
+        <description>string</description>
+        <!--Optional:-->
+        <version>100</version>
+        <!--Optional:-->
+        <versionTimestamp>2008-09-29T07:19:45</versionTimestamp>
+        <!--Optional:-->
+        <effectiveDate>2014-09-19</effectiveDate>
+        <!--Optional:-->
+        <effectiveToDate>2006-08-19+05:30</effectiveToDate>
+        <!--Optional:-->
+        <status>string</status>
+      </businessId>
+      <!--Optional:-->
+      <dataStatus>string</dataStatus>
+      <!--Optional:-->
+      <changedByPerson>
+        <domain>string</domain>
+        <!--Optional:-->
+        <ibmlSchemeName>string</ibmlSchemeName>
+        <!--Zero or more repetitions:-->
+        <id>string</id>
+        <!--Optional:-->
+        <shortDescription>string</shortDescription>
+        <!--Optional:-->
+        <description>string</description>
+        <!--Optional:-->
+        <version>100</version>
+        <!--Optional:-->
+        <versionTimestamp>2009-05-16T18:12:28</versionTimestamp>
+        <!--Optional:-->
+        <effectiveDate>2003-08-09+05:30</effectiveDate>
+        <!--Optional:-->
+        <effectiveToDate>2012-09-13+05:30</effectiveToDate>
+        <!--Optional:-->
+        <status>string</status>
+      </changedByPerson>
+      <!--Optional:-->
+      <creationDate>2009-10-14</creationDate>
+      <!--Optional:-->
+      <updateDate>2010-03-18</updateDate>
+      <!--Optional:-->
+      <dataSource>string</dataSource>
+    </common>
+    <!--Optional:-->
+    <dataMatrix>
+      <!--1 or more repetitions:-->
+      <dataElement>
+        <domain>string</domain>
+        <!--Optional:-->
+        <ibmlSchemeName>string</ibmlSchemeName>
+        <!--Zero or more repetitions:-->
+        <id>string</id>
+        <!--Optional:-->
+        <shortDescription>string</shortDescription>
+        <!--Optional:-->
+        <description>string</description>
+        <!--Optional:-->
+        <version>100</version>
+        <!--Optional:-->
+        <versionTimestamp>2018-12-29T01:21:14+05:30</versionTimestamp>
+        <!--Optional:-->
+        <effectiveDate>2017-11-01+05:30</effectiveDate>
+        <!--Optional:-->
+        <effectiveToDate>2014-06-11+05:30</effectiveToDate>
+        <!--Optional:-->
+        <status>string</status>
+      </dataElement>
+    </dataMatrix>
+  </referenceData>
+  <!--<tradeInformationWarehouseCalculationState>-->
+    <!--<coreProcessingTradeId>string</coreProcessingTradeId>-->
+    <!--<calculationStatus>Auto</calculationStatus>-->
+    <!--<effectiveFrom>2015-08-24</effectiveFrom>-->
+    <!--Optional:-->
+    <!--<stimulusVersion>string</stimulusVersion>-->
+  <!--</tradeInformationWarehouseCalculationState>-->
+</gbom>

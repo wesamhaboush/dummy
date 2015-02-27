@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:complexType name="T_common">
+		<xs:annotation>
+			<xs:documentation>This block should move to gbom_commonRefData.xsd</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" minOccurs="0"/>
+			<xs:element name="businessId" type="T_identifier" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="dataStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="changedByPerson" type="T_identifier" minOccurs="0"/>
+			<xs:element name="creationDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="updateDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="dataSource" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_dataMatrix">
+		<xs:sequence>
+			<xs:element name="dataElement" type="T_identifier" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="T_identifier">
+		<xs:annotation>
+			<xs:documentation>This block should move to gbom_commonRefData.xsd</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="domain" type="xs:string"/>
+			<xs:element name="ibmlSchemeName" type="xs:string" minOccurs="0"/>
+			<xs:element name="id" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="condition" type="T_identifier" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="shortDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="version" type="xs:integer" minOccurs="0"/>
+			<xs:element name="versionTimestamp" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="effectiveDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="effectiveToDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="status" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="T_odsControl">
+		<xs:sequence>
+			<xs:element name="sequenceNumber" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="T_referenceData">
+		<xs:sequence>
+			<xs:element name="common" type="T_common" minOccurs="0"/>
+			<xs:element name="dataMatrix" type="T_dataMatrix" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

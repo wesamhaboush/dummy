@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="dataValueMatrix.xsd"/>
+<xs:include schemaLocation="tradeInformationWarehouseCalculationState.xsd"/>
+	<xs:element name="gbom" type="T_gbom"/>
+	
+	<xs:complexType name="T_gbom">
+		<xs:choice>
+			<xs:element name="referenceData" type="T_referenceData" minOccurs="0"/>
+			<xs:element name="tradeInformationWarehouseCalculationState" type="T_tradeInformationWarehouseCalculationState" /> 
+		</xs:choice>
+	</xs:complexType>
+	
+</xs:schema>
